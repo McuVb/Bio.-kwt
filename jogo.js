@@ -33,20 +33,6 @@ btnRestart.onclick = () => {
 
 
 
-// Verifique se o dispositivo suporta eventos de toque
-var isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
-
-// Se o dispositivo suporta eventos de toque, use 'touchstart', caso contrário, use 'click'
-var eventoDeInteracao = isTouchDevice ? 'touchstart' : 'click';
-
-// Adicione um manipulador de evento ao elemento desejado
-var elementoDoQuebraCabeca = document.getElementById('seu-quebra-cabeca-elemento');
-elementoDoQuebraCabeca.addEventListener(eventoDeInteracao, function(event) {
-  // Lógica do seu quebra-cabeça aqui
-});
-
-
-
 
 btnContinue.onclick = () => { // Função para continuar
     if (currentIndex < questions.length - 1) {
